@@ -207,3 +207,9 @@ test-driver
 zlib/Makefile.in
 zlib/aclocal.m4
 zlib/configure
+
+os2.cmd
+os2.sh
+build2.sh
+
+

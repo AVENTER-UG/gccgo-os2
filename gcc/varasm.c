@@ -6482,7 +6482,9 @@ default_no_named_section (const char *name ATTRIBUTE_UNUSED,
 {
   /* Some object formats don't support named sections at all.  The
      front-end should already have flagged this as an error.  */
+#ifndef __OS2__
   gcc_unreachable ();
+#endif
 }
 
 #ifndef TLS_SECTION_ASM_FLAG

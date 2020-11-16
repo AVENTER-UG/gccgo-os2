@@ -105,7 +105,9 @@ go_write_export_data (const char *bytes, unsigned int size)
 
   if (sec == NULL)
     {
+#ifndef __OS2__
       gcc_assert (targetm_common.have_named_sections);
+#endif
       sec = get_section (GO_EXPORT_SECTION_NAME,
 			 TARGET_AIX ? SECTION_EXCLUDE : SECTION_DEBUG,
 			 NULL);
